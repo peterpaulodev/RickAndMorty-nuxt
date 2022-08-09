@@ -1,6 +1,11 @@
 <template>
-    <div>
-        <section id="characters" class="col-md-12 mt-5 background-pacific-blue">
+    <div class="wave-bg">
+        <PageTitle
+            title="Rick and Morty JQuery API"
+            image="/img/dancing-rick.gif"
+        />
+
+        <section id="characters" class="col-md-12 mt-5 pt-2 background-pacific-blue">
             <h1 class="text-center fw-bold text-white mt-4">
                 Personagens
             </h1>
@@ -32,25 +37,24 @@
 
 <script>
     export default {
-        name: "IndexPage",
-        data() {
-            return {
-                characters: [],
-                searchCharacterName: ''
-            }
-        },
-        methods: {
-            async getCharacters() {
-                const url = "/character/?name=" + this.searchCharacterName;
-
-                let characters = await this.$axios.$get(url);
-                this.characters = characters.results;
-            }
-        },
-        mounted() {
-            this.getCharacters()
+    name: "IndexPage",
+    data() {
+        return {
+            characters: [],
+            searchCharacterName: ""
+        };
+    },
+    methods: {
+        async getCharacters() {
+            const url = "/character/?name=" + this.searchCharacterName;
+            let characters = await this.$axios.$get(url);
+            this.characters = characters.results;
         }
+    },
+    mounted() {
+        this.getCharacters();
     }
+}
 </script>
 
 <style>

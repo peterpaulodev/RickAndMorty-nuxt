@@ -42,12 +42,5 @@
                 </div>
             </div>
         </nav>
-
-        <section id="header" class="col-md-12 text-center mb-4 mt-5">
-            <h1 class="fw-bold">
-                Rick and Morty JQuery API
-            </h1>
-            <img src="~/static/img/dancing-rick.gif" class="mb-3 mt-5">
-        </section>
     </div>
 </template>

@@ -1,5 +1,10 @@
 <template>
-    <div>
+    <div class="wave-bg">
+        <PageTitle
+            title="About Rick and Morty!"
+            image="/img/drunk-rick.gif"
+        />
+
         <section id="about-description" class="col-md-12 mt-5 text-center text-white background-pacific-blue">
             <p class="px-5 py-5 fs-5">
                 Rick and Morty (em português Rick e Morty) é uma série de animação adulta norte-americana de comédia
